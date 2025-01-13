@@ -14,6 +14,8 @@ const types = [...new Set(bookmarks.map((bookmark: Bookmark) => bookmark.data.ty
 const sortedBookmarks = bookmarks.sort(
   (a: Bookmark, b: Bookmark) => b.data.createdAt.getTime() - a.data.createdAt.getTime()
 );
+
+console.log(Astro.url.pathname);
 ---
 
 <BaseLayout title="Bookmarks" description="My collection of interesting reads and resources">

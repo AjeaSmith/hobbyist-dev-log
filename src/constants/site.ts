@@ -4,11 +4,11 @@ export type NavigationItem = {
 };
 
 export const SITE = {
-    name: "ByteKai",
-    title: "Software Engineer & Curious Tinkerer",
-    description: "Personal portfolio and blog",
-    url: "https://bytekai.dev",
-    defaultImage: "/default-og-image.jpg",
+	name: "Ajea",
+	title: "Hobbyist Dev",
+	description: "Personal portfolio and blog",
+	url: "https://hobbyist-dev-log.netlify.app/",
+	defaultImage: "/default-og-image.jpg",
 } as const;
 
 export const NAVIGATION: {
@@ -17,6 +17,7 @@ export const NAVIGATION: {
     main: [
         { name: "Home", path: "/" },
         { name: "Blog", path: "/blog" },
+        { name: "Projects", path: "/projects" },
         { name: "Notes", path: "/notes" },
         { name: "Bookmarks", path: "/bookmarks" }
     ],

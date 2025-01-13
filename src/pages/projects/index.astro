@@ -4,7 +4,6 @@ import BaseLayout from "../../components/layout/BaseLayout.astro";
 import Container from "../../components/ui/Container.astro";
 import ContentList from "../../components/shared/ContentList.astro";
 
-
 const siteConfig = await getEntry("site", "home");
 if (!siteConfig) {
   throw new Error("Site configuration not found");
@@ -21,6 +20,7 @@ const projects = await getCollection("projects");
       <div class="section-header">
         <h2>{site.sections.projects.title}</h2>
       </div>
+     
       <ContentList>
         {
           projects.map((project) => (

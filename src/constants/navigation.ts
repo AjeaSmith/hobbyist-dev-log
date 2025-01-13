@@ -10,6 +10,10 @@ export const NAVIGATION: Navigation = [
         path: "/blog",
     },
     {
+        name: "Projects",
+        path: "/projects",
+    },
+    {
         name: "Notes",
         path: "/notes",
     },
