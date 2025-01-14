@@ -31,12 +31,6 @@ const latestPosts = posts
   )
   .slice(0, 3);
 
-const experiences = await getCollection("experience");
-const sortedExperiences = experiences.sort(
-  (a: CollectionEntry<"experience">, b: CollectionEntry<"experience">) =>
-    b.data.startDate.getTime() - a.data.startDate.getTime()
-);
-
 const projects = await getCollection("projects");
 const featuredProjects = projects.filter((project: CollectionEntry<"projects">) => project.data.featured).slice(0, 3);
 ---
@@ -109,31 +103,6 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
         }
       </ContentList>
     </section>
-
-    <section class="section">
-      <div class="section-header">
-        <h2>{site.sections.experience.title}</h2>
-        <a href="/experience">{site.sections.experience.viewAllText}</a>
-      </div>
-      <div class="content-list">
-        {
-          sortedExperiences.slice(0, 2).map((exp) => (
-            <article>
-              <div class="title-row">
-                <div class="company-info">
-                  <img src={exp.data.logo} alt="" class="company-logo" />
-                  <span>{exp.data.title}</span>
-                </div>
-                <time>
-                  {formatDate(exp.data.startDate)} - {exp.data.current ? "Present" : formatDate(exp.data.endDate)}
-                </time>
-              </div>
-              <p class="muted-text">{exp.data.description}</p>
-            </article>
-          ))
-        }
-      </div>
-    </section>
   </Container>
 </BaseLayout>
 
@@ -172,18 +141,6 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
     align-items: baseline;
     gap: 1rem;
     font-size: var(--text-sm);
-  }
-
-  .company-info {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .company-logo {
-    width: 1.5rem;
-    height: 1.5rem;
-    object-fit: contain;
   }
 
   time {
