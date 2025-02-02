@@ -14,7 +14,7 @@ tags:
 ## Responsive Design Pathway - FEM Part 1
 
 Use rem or em for breakpoint sizes 
-    - <mark>Adapts better:</mark> Relative units scale with the user’s screen size or browser settings. For example, if someone has their browser zoomed in for easier reading, relative units adjust accordingly, but pixels stay the same size. This means your site can adapt better to different viewing conditions.
+<mark>Adapts better:</mark> Relative units scale with the user’s screen size or browser settings. For example, if someone has their browser zoomed in for easier reading, relative units adjust accordingly, but pixels stay the same size. This means your site can adapt better to different viewing conditions.
     * <mark>More consistent across devices:</mark> Different devices have different pixel densities. What looks good in pixels on one screen might look too small or too big on another. Relative units help ensure your design looks consistent, no matter the device.
     * <mark>Future-proof:</mark> As new devices with various screen sizes and resolutions come out, using relative units means your site is more likely to look good on them without needing adjustments.
 
